@@ -20,10 +20,7 @@ public class Rental {
       return _movie.getCharge(_daysRented);
     }
 
-    public int getFrequentRenterPoints() { 
-     int frequentRenterPoints = 0;
-     if ((getMovie().getPriceCode() == Movie.NEW_RELEASE) &&
-                getDaysRented() > 1) frequentRenterPoints ++;
-      return frequentRenterPoints++;
+   public int getFrequentRenterPoints(){
+      return _movie.getFrequentRenterPoints(_daysRented);
    }
 }
